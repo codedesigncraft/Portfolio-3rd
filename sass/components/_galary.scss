@@ -1,0 +1,64 @@
+
+.section-galary {
+    max-width: 130rem;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.galary {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 8rem;
+
+    @include respond (tab-port) {
+        width: 80%;
+    }
+
+    &__cell {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.2);
+                filter: blur(.3rem);
+            }
+        }
+    }
+
+    .gallery {
+
+        &__list {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+
+            @include respond (phone) {
+                gap: 1rem;
+            }
+        }
+
+        &__item {
+
+            &-link {
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: $color-primary-main;
+
+                @include respond (phone) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+
+    } 
+}
+
